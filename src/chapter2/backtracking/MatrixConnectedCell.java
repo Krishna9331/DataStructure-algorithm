@@ -57,6 +57,7 @@ public class MatrixConnectedCell {
             int newJ = c + direction[i][1];
             int val = getVal(matrix, newI, newJ, l, h);
             if (val > 0 && (container[newI][newJ] == false)) {
+                //start the traversal for an adjacent cell if it is 1 and not visited yet
                 findMaxBlock(matrix, newI, newJ, l, h, size, container);
             }
         }
