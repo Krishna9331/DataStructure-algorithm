@@ -68,13 +68,13 @@ public class TwoListMergeToOne<E> {
 		}
 		for (int i = 0; i < d; i++) {
 			p = p.next;
-			while (p != null && q != null) {
-				if (isEqual(p, q)) {
-					return p;
-				}
-				p = p.next;
-				q = q.next;
+		}
+		while (p != null && q != null) {
+			if (isEqual(p, q)) {
+				return p;
 			}
+			p = p.next;
+			q = q.next;
 		}
 
 		return null;
