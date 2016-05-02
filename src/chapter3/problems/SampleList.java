@@ -28,6 +28,30 @@ public class SampleList {
 		}
 	}
 
+	public void deleteFromLinkedList(int position) {
+		if (null == head) {
+			System.out.println("List is empty...");
+			return;
+		}
+		int k = 0;
+		Node p = head, q = null;
+		if (position == 0) {
+			head = head.next;
+			return;
+		} else {
+			while (null != p && k < position) {
+				k++;
+				q = p;
+				p = p.next;
+			}
+			if (null == p) {
+				System.out.println("Position does not exist...");
+			} else {
+				q.next = p.next;
+			}
+		}
+	}
+
 	public void print() {
 		Node p = head;
 		while (null != p) {

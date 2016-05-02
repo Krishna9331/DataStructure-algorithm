@@ -42,7 +42,7 @@ public class SinglyLinkedList<E> {
         }
         int k = 0;
         Node<E> p = head, q = null;
-        if (position == 1) {
+        if (position == 0) {
             head = head.next;
             return;
         } else {
