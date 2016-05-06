@@ -43,6 +43,15 @@ public class LinkedListStack<E> {
 		return head.item;
 	}
 
+	public void print() {
+		Node<E> p = head;
+		while (p != null) {
+			System.out.print(p.item + " -->");
+			p = p.next;
+		}
+		System.out.println();
+	}
+
 	public static void main(String[] args) {
 		LinkedListStack<Integer> lls = new LinkedListStack<>();
 		lls.pop();
@@ -50,9 +59,13 @@ public class LinkedListStack<E> {
 		lls.push(4);
 		lls.push(6);
 		lls.push(9);
+		System.out.println("elements in stack ...");
+		lls.print();
 		System.out.println("top element: " + lls.getTop());
 		lls.pop();
 		System.out.println("top element: " + lls.getTop());
+		System.out.println("elements in stack ...");
+		lls.print();
 	}
 
 }
