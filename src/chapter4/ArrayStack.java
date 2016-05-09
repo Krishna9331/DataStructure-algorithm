@@ -6,10 +6,10 @@ package chapter4;
 public class ArrayStack<E> {
 
 	private int top;
-	private Object[] stack;
+	private E[] stack;
 
 	public ArrayStack(int size) {
-		stack = new Object[size];
+		stack = (E[]) new Object[size];
 		top = -1;
 	}
 
@@ -40,8 +40,13 @@ public class ArrayStack<E> {
 		top--;
 	}
 
-	public void getTop() {
+	public E getTop() {
 		System.out.println("\ntop: " + stack[top]);
+		return stack[top];
+	}
+
+	public E getNthTop(int n) {
+		return stack[top - n];
 	}
 
 	public static void main(String[] args) {
