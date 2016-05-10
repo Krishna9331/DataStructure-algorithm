@@ -22,7 +22,7 @@ public class LargestRectangleInHistogram {
 	 * for below code steps:
 	 * it will start for loop for processing left to right.
 	 * STEP 1: at first element(3, 0) code finds that stack is empty, so it push the element in stack.
-	 * once it compare the next which is (2,0) hence breaks the current sub problem and calculate area.(possible area
+	 * once it compare the next, which is (2,0) hence breaks the current sub problem and calculate area.(possible area
 	 * is only one 3*1.
 	 * <br/>
 	 * STEP2: next start the sub problem with current element(2, 0).

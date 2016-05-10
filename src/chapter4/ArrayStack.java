@@ -31,13 +31,14 @@ public class ArrayStack<E> {
 		stack[top] = item;
 	}
 
-	public void pop() {
+	public E pop() {
 		if (isEmpty()) {
 			System.out.println("stack is Empty -> empty stack exception");
-			return;
 		}
 		System.out.println("pop: " + stack[top]);
+		E val = stack[top];
 		top--;
+		return val;
 	}
 
 	public E getTop() {
