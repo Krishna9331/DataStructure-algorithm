@@ -7,9 +7,11 @@ public class ArrayStack<E> {
 
 	private int top;
 	private E[] stack;
+	private int capacity;
 
 	public ArrayStack(int size) {
 		stack = (E[]) new Object[size];
+		capacity = size;
 		top = -1;
 	}
 
@@ -18,7 +20,7 @@ public class ArrayStack<E> {
 	}
 
 	public boolean isFull() {
-		return top == stack.length - 1;
+		return top == capacity - 1;
 	}
 
 	public void push(E item) {
