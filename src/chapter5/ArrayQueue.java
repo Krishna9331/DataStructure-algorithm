@@ -47,6 +47,7 @@ public class ArrayQueue<E> {
 			System.out.println("Queue is empty");
 		} else {
 			data = queue[front];
+			queue[front] = null;
 			if (front == rear) {
 				front = -1;
 				rear = -1;
