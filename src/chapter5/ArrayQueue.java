@@ -26,7 +26,11 @@ public class ArrayQueue<E> {
 	}
 
 	public int getSize() {
-		return (capacity - front + rear + 1) % capacity;
+		int ele = capacity - front + rear + 1;
+		if (front > rear) {
+			return capacity - front + rear + 1;
+		}
+		return rear - front + 1;
 	}
 
 	public void enQueue(E data) {
