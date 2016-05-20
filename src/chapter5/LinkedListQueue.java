@@ -16,6 +16,10 @@ public class LinkedListQueue<E> {
 		}
 	}
 
+	public boolean isEmpty() {
+		return head == null;
+	}
+
 	public void enQueue(E item) {
 		Node<E> newNode = new Node<>(item, null);
 		if (head == null) {
