@@ -147,7 +147,7 @@ public class BinaryTree<E> {
 	 * goes to traverse the right subtree, once that is done it comes back and print the current node.
 	 * <pre>
 	 * 1) push the root in the stack
-	 * 2)initialize previous a null
+	 * 2)initialize previous as null
 	 * 3)if stack is not empty, get the top element from the stack
 	 * 4)if previous is null or current is equal to previous.left or previous.right
 	 * 		i)if current.left is not null push the left into the stack
@@ -162,8 +162,8 @@ public class BinaryTree<E> {
 	 * below will be the flow:
 	 * push 1 into stack     Stack[1]
 	 * previous as null
-	 * current is 1 (top od stack)
-	 * since previous as null and 1 has left child so push 1 into stack Stack[2, 1]
+	 * current is 1 (top of stack)
+	 * since previous as null and 1 has left child so push 2 into stack Stack[2, 1]
 	 * previous = current, which will be 1
 	 * next iteration
 	 * current will be 2 (again top of stack)
