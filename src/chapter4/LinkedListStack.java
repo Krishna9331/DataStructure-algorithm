@@ -18,7 +18,7 @@ public class LinkedListStack<E> {
 	}
 
 	public void push(E item) {
-		System.out.println("push: " + item);
+//		System.out.println("push: " + item);
 		Node<E> newNode = new Node<>(item, null);
 		newNode.next = head;
 		head = newNode;
@@ -29,7 +29,7 @@ public class LinkedListStack<E> {
 			System.out.println("stack is Empty -> empty stack exception");
 			return null;
 		}
-		System.out.println("pop: " + head.item);
+//		System.out.println("pop: " + head.item);
 		E data = head.item;
 		head = head.next;
 		return data;

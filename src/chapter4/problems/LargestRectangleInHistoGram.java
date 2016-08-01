@@ -22,11 +22,11 @@ public class LargestRectangleInHistogram {
 	 * for below code steps:
 	 * it will start for loop for processing left to right.
 	 * STEP 1: at first element(3, 0) code finds that stack is empty, so it push the element in stack.
-	 * once it compare the next, which is (2,0) hence breaks the current sub problem and calculate area.(possible area
+	 * once it compare the next, which is (2,1) hence breaks the current sub problem and calculate area.(possible area
 	 * is only one 3*1.
 	 * <br/>
-	 * STEP2: next start the sub problem with current element(2, 0).
-	 * it checks for next element (5, 0) and (6, 0) and push it to stack, however will break at (1,0). hence stack
+	 * STEP2: next start the sub problem with current element(2, 1).
+	 * it checks for next element (5, 2) and (6, 2) and push it to stack, however will break at (1,4). hence stack
 	 * will have 3 values, and it will calculate all possible area(which are: 6*1, 5*2 and then 2*4)
 	 * STEP3: same it will continue with (1, 0)....
 	 * <br/>

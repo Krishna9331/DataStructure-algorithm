@@ -1,6 +1,7 @@
 package chapter6.problems;
 
 import chapter5.LinkedListQueue;
+import chapter5.problems.InterleavingHalf;
 
 import static chapter6.problems.SampleBinaryTree.Node;
 
