@@ -1,13 +1,11 @@
-package chapter6.problems;
-
-import static chapter6.problems.SampleBinaryTree.Node;
+package chapter6.problems.binarytree;
 
 /**
  * Created by mishrk3 on 6/16/2016.
  */
 public class StructurallyEqualTree {
 
-	public boolean isStructurallyEqual(Node<Integer> root1, Node<Integer> root2) {
+	public boolean isStructurallyEqual(SampleBinaryTree.Node<Integer> root1, SampleBinaryTree.Node<Integer> root2) {
 		if (root1 == null && root2 == null) {
 			return true;
 		}

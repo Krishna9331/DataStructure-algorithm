@@ -1,22 +1,20 @@
-package chapter6.problems;
+package chapter6.problems.binarytree;
 
 import chapter4.LinkedListStack;
-
-import static chapter6.problems.SampleBinaryTree.Node;
 
 /**
  * Created by mishrk3 on 6/20/2016.
  */
 public class ZigZagTraversal {
 
-	public void zigZagTraverse(Node<Integer> root) {
-		Node<Integer> temp;
+	public void zigZagTraverse(SampleBinaryTree.Node<Integer> root) {
+		SampleBinaryTree.Node<Integer> temp;
 		boolean leftToRight = true;
 		if (root == null) {
 			return;
 		}
-		LinkedListStack<Node<Integer>> currentLevel = new LinkedListStack<>();
-		LinkedListStack<Node<Integer>> nextLevel = new LinkedListStack<>();
+		LinkedListStack<SampleBinaryTree.Node<Integer>> currentLevel = new LinkedListStack<>();
+		LinkedListStack<SampleBinaryTree.Node<Integer>> nextLevel = new LinkedListStack<>();
 		currentLevel.push(root);
 		while (!currentLevel.isEmpty()) {
 			temp = currentLevel.pop();
@@ -36,7 +34,7 @@ public class ZigZagTraversal {
 			}
 			if (currentLevel.isEmpty()) {
 				leftToRight = !leftToRight;
-				LinkedListStack<Node<Integer>> tempStack = currentLevel;
+				LinkedListStack<SampleBinaryTree.Node<Integer>> tempStack = currentLevel;
 				currentLevel = nextLevel;
 				nextLevel = tempStack;
 			}

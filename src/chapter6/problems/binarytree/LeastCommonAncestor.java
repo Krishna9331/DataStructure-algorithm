@@ -1,6 +1,4 @@
-package chapter6.problems;
-
-import static chapter6.problems.SampleBinaryTree.Node;
+package chapter6.problems.binarytree;
 
 /**
  * Created by mishrk3 on 6/17/2016.
@@ -37,9 +35,9 @@ public class LeastCommonAncestor {
 	 * Now state 1 will have left as 2 and right as NULL so final answer will be 2.
 	 */
 
-	public Node<Integer> findLeastCommonAncestor(Node<Integer> root, Integer firstEle, Integer secEle) {
-		Node<Integer> left = null;
-		Node<Integer> right = null;
+	public SampleBinaryTree.Node<Integer> findLeastCommonAncestor(SampleBinaryTree.Node<Integer> root, Integer firstEle, Integer secEle) {
+		SampleBinaryTree.Node<Integer> left = null;
+		SampleBinaryTree.Node<Integer> right = null;
 		if (root == null) {
 			return null;
 		}

@@ -1,6 +1,4 @@
-package chapter6.problems;
-
-import static chapter6.problems.SampleBinaryTree.Node;
+package chapter6.problems.binarytree;
 
 /**
  * Created by mishrk3 on 6/13/2016.
@@ -12,7 +10,7 @@ public class DeleteBinaryTree {
 	 *             collector. The post order traversal is the best candidate for doing so as it first go through the
 	 *             child before coming to root. Hence we start traversing the element and nullify in place of printing.
 	 */
-	public void deleteBinaryTree(Node<Integer> root) {
+	public void deleteBinaryTree(SampleBinaryTree.Node<Integer> root) {
 		if (null == root) {
 			return;
 		}

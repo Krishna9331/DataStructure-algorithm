@@ -1,4 +1,4 @@
-package chapter6.problems;
+package chapter6.problems.binarytree;
 
 /**
  * Created by mishrk3 on 5/24/2016.

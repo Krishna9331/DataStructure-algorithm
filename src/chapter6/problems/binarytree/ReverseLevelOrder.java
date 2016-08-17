@@ -1,19 +1,17 @@
-package chapter6.problems;
+package chapter6.problems.binarytree;
 
 import chapter4.LinkedListStack;
 import chapter5.LinkedListQueue;
-
-import static chapter6.problems.SampleBinaryTree.Node;
 
 /**
  * Created by mishrk3 on 6/13/2016.
  */
 public class ReverseLevelOrder {
 
-	public void printReverseLevelOrder(Node<Integer> root) {
-		LinkedListQueue<Node<Integer>> queue = new LinkedListQueue<>();
-		LinkedListStack<Node<Integer>> stack = new LinkedListStack<>();
-		Node<Integer> temp;
+	public void printReverseLevelOrder(SampleBinaryTree.Node<Integer> root) {
+		LinkedListQueue<SampleBinaryTree.Node<Integer>> queue = new LinkedListQueue<>();
+		LinkedListStack<SampleBinaryTree.Node<Integer>> stack = new LinkedListStack<>();
+		SampleBinaryTree.Node<Integer> temp;
 		if (null == root) {
 			System.out.printf("No element in tree");
 		}

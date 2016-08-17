@@ -1,8 +1,8 @@
-package chapter6.problems;
+package chapter6.problems.binarytree;
 
 import chapter5.LinkedListQueue;
 
-import static chapter6.problems.SampleBinaryTree.Node;
+import static chapter6.problems.binarytree.SampleBinaryTree.Node;
 
 /**
  * Created by mishrk3 on 6/16/2016.

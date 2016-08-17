@@ -1,6 +1,4 @@
-package chapter6.problems;
-
-import static chapter6.problems.SampleBinaryTree.Node;
+package chapter6.problems.binarytree;
 
 /**
  * Created by mishrk3 on 6/18/2016.
@@ -15,14 +13,14 @@ import static chapter6.problems.SampleBinaryTree.Node;
 public class TreeFromInorderAndPreOrder {
 	static int preOrderIndex = 0;
 
-	public Node<Integer> buildTree(int[] inOrder, int[] preOrder, int inOrderStart, int inOrderEnd) {
+	public SampleBinaryTree.Node<Integer> buildTree(int[] inOrder, int[] preOrder, int inOrderStart, int inOrderEnd) {
 
-		Node<Integer> node = null;
+		SampleBinaryTree.Node<Integer> node = null;
 		if (inOrderStart > inOrderEnd) {
 			return node;
 		}
 		//create node from the current index of pre order
-		node = new Node<>(preOrder[preOrderIndex], null, null);
+		node = new SampleBinaryTree.Node<>(preOrder[preOrderIndex], null, null);
 		preOrderIndex++;
 		if (inOrderStart == inOrderEnd) {
 			return node;
@@ -51,7 +49,7 @@ public class TreeFromInorderAndPreOrder {
 		int[] inOrder = { 4, 2, 5, 1, 6, 3, 7 };
 		int[] preOrder = { 1, 2, 4, 5, 3, 6, 7 };
 
-		Node<Integer> root = tfip.buildTree(inOrder, preOrder, 0, 6);
+		SampleBinaryTree.Node<Integer> root = tfip.buildTree(inOrder, preOrder, 0, 6);
 		System.out.println("Tree created(please debug to see the tree).");
 
 	}

@@ -1,6 +1,5 @@
-package chapter6.problems;
+package chapter6.problems.binarytree;
 
-import static chapter6.problems.SampleBinaryTree.Node;
 import static java.lang.Math.max;
 
 /**
@@ -8,7 +7,7 @@ import static java.lang.Math.max;
  */
 public class DiameterOfTree {
 
-	public int findDiameter(Node<Integer> root) {
+	public int findDiameter(SampleBinaryTree.Node<Integer> root) {
 		if (root == null) {
 			return 0;
 		}
@@ -19,7 +18,7 @@ public class DiameterOfTree {
 		return max(leftHeight + rightHeight + 1, max(leftDiameter, rightDiameter));
 	}
 
-	private int height(Node<Integer> root) {
+	private int height(SampleBinaryTree.Node<Integer> root) {
 		if (root == null) {
 			return 0;
 		}

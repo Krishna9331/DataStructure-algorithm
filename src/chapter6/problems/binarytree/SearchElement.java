@@ -1,15 +1,13 @@
-package chapter6.problems;
+package chapter6.problems.binarytree;
 
 import chapter5.LinkedListQueue;
-
-import static chapter6.problems.SampleBinaryTree.Node;
 
 /**
  * Created by mishrk3 on 5/24/2016.
  */
 public class SearchElement {
 
-	public boolean searchInBinaryTree(Node<Integer> root, int data) {
+	public boolean searchInBinaryTree(SampleBinaryTree.Node<Integer> root, int data) {
 		boolean temp;
 		if (root == null) {
 			return false;
@@ -27,11 +25,11 @@ public class SearchElement {
 		}
 	}
 
-	public boolean searchNonRecursive(Node<Integer> root, int data) {
+	public boolean searchNonRecursive(SampleBinaryTree.Node<Integer> root, int data) {
 
-		Node<Integer> p = root;
-		Node<Integer> temp;
-		LinkedListQueue<Node<Integer>> queue = new LinkedListQueue<>();
+		SampleBinaryTree.Node<Integer> p = root;
+		SampleBinaryTree.Node<Integer> temp;
+		LinkedListQueue<SampleBinaryTree.Node<Integer>> queue = new LinkedListQueue<>();
 		if (p == null) {
 			return false;
 		}

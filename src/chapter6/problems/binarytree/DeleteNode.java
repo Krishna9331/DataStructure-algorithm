@@ -1,21 +1,19 @@
-package chapter6.problems;
+package chapter6.problems.binarytree;
 
 import chapter5.LinkedListQueue;
-
-import static chapter6.problems.SampleBinaryTree.Node;
 
 /**
  * Created by mishrk3 on 6/16/2016.
  */
 public class DeleteNode {
 
-	public void deleteNodeFromTree(Node<Integer> root, Integer searchElement) {
+	public void deleteNodeFromTree(SampleBinaryTree.Node<Integer> root, Integer searchElement) {
 
 		DeepestElement de = new DeepestElement();
-		Node<Integer> deepestNode = de.findDeepestElement(root);
-		Node<Integer> temp = null;
+		SampleBinaryTree.Node<Integer> deepestNode = de.findDeepestElement(root);
+		SampleBinaryTree.Node<Integer> temp = null;
 
-		LinkedListQueue<Node<Integer>> queue = new LinkedListQueue<>();
+		LinkedListQueue<SampleBinaryTree.Node<Integer>> queue = new LinkedListQueue<>();
 		queue.enQueue(root);
 
 		while (!queue.isEmpty()) {

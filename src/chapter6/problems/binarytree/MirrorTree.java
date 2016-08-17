@@ -1,14 +1,12 @@
-package chapter6.problems;
-
-import static chapter6.problems.SampleBinaryTree.Node;
+package chapter6.problems.binarytree;
 
 /**
  * Created by mishrk3 on 6/17/2016.
  */
 public class MirrorTree {
 
-	public Node<Integer> mirrorTree(Node<Integer> root) {
-		Node<Integer> temp = null;
+	public SampleBinaryTree.Node<Integer> mirrorTree(SampleBinaryTree.Node<Integer> root) {
+		SampleBinaryTree.Node<Integer> temp = null;
 		if (root != null) {
 			mirrorTree(root.left);
 			mirrorTree(root.right);
@@ -19,7 +17,7 @@ public class MirrorTree {
 		return root;
 	}
 
-	public boolean isMirrorTree(Node<Integer> root1, Node<Integer> root2) {
+	public boolean isMirrorTree(SampleBinaryTree.Node<Integer> root1, SampleBinaryTree.Node<Integer> root2) {
 		if (root1 == null && root2 == null) {
 			return true;
 		}
@@ -37,7 +35,7 @@ public class MirrorTree {
 		MirrorTree mt = new MirrorTree();
 		SampleBinaryTree tree = SampleBinaryTree.getDefaultTree();
 		SampleBinaryTree tree1 = SampleBinaryTree.getDefaultTree();
-		Node<Integer> mirroredOne = mt.mirrorTree(tree.getRoot());
+		SampleBinaryTree.Node<Integer> mirroredOne = mt.mirrorTree(tree.getRoot());
 		System.out.println("Tree is mirrored");
 		System.out.println("two tree are mirror of each other: " + mt.isMirrorTree(tree1.getRoot(), mirroredOne));
 	}

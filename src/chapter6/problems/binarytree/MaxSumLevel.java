@@ -1,19 +1,16 @@
-package chapter6.problems;
+package chapter6.problems.binarytree;
 
 import chapter5.LinkedListQueue;
-import chapter5.problems.InterleavingHalf;
-
-import static chapter6.problems.SampleBinaryTree.Node;
 
 /**
  * Created by mishrk3 on 6/16/2016.
  */
 public class MaxSumLevel {
 
-	public int findMaxSumLevelOfTree(Node<Integer> root) {
+	public int findMaxSumLevelOfTree(SampleBinaryTree.Node<Integer> root) {
 
-		LinkedListQueue<Node<Integer>> queue = new LinkedListQueue<>();
-		Node<Integer> temp = null;
+		LinkedListQueue<SampleBinaryTree.Node<Integer>> queue = new LinkedListQueue<>();
+		SampleBinaryTree.Node<Integer> temp = null;
 		int maxSum = 0;
 		int levelSum = 0;
 		int level = 0;

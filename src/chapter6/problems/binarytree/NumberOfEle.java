@@ -1,18 +1,16 @@
-package chapter6.problems;
+package chapter6.problems.binarytree;
 
 import chapter5.LinkedListQueue;
-
-import static chapter6.problems.SampleBinaryTree.Node;
 
 /**
  * Created by mishrk3 on 5/24/2016.
  */
 public class NumberOfEle {
 
-	public int numberOfElement(Node<Integer> root) {
-		Node<Integer> p = root;
-		Node<Integer> temp;
-		LinkedListQueue<Node<Integer>> queue = new LinkedListQueue<>();
+	public int numberOfElement(SampleBinaryTree.Node<Integer> root) {
+		SampleBinaryTree.Node<Integer> p = root;
+		SampleBinaryTree.Node<Integer> temp;
+		LinkedListQueue<SampleBinaryTree.Node<Integer>> queue = new LinkedListQueue<>();
 		int count = 0;
 		if (p != null) {
 			count++;
@@ -32,7 +30,7 @@ public class NumberOfEle {
 		return count;
 	}
 
-	public int sizeOfTree(Node<Integer> root) {
+	public int sizeOfTree(SampleBinaryTree.Node<Integer> root) {
 		if (null == root) {
 			return 0;
 		}

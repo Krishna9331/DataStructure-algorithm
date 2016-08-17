@@ -1,15 +1,13 @@
-package chapter6.problems;
+package chapter6.problems.binarytree;
 
 import chapter5.LinkedListQueue;
-
-import static chapter6.problems.SampleBinaryTree.Node;
 
 /**
  * Created by mishrk3 on 6/13/2016.
  */
 public class HeightOfBinaryTree {
 
-	public int heightOfTreeRecursively(Node<Integer> root) {
+	public int heightOfTreeRecursively(SampleBinaryTree.Node<Integer> root) {
 		int leftHeight = 0;
 		int rightHeight = 0;
 		if (null == root) {
@@ -42,10 +40,10 @@ public class HeightOfBinaryTree {
 	 * increase the count.   [2, 3, null]
 	 * Thus we see that after each level it increase the count and increase the count
 	 */
-	public int heightOfTree(Node<Integer> root) {
+	public int heightOfTree(SampleBinaryTree.Node<Integer> root) {
 		int level = 0;
-		LinkedListQueue<Node<Integer>> queue = new LinkedListQueue<>();
-		Node<Integer> temp;
+		LinkedListQueue<SampleBinaryTree.Node<Integer>> queue = new LinkedListQueue<>();
+		SampleBinaryTree.Node<Integer> temp;
 		if (null == root) {
 			return 0;
 		}

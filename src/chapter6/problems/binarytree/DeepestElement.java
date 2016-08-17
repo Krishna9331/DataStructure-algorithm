@@ -1,17 +1,15 @@
-package chapter6.problems;
+package chapter6.problems.binarytree;
 
 import chapter5.LinkedListQueue;
-
-import static chapter6.problems.SampleBinaryTree.Node;
 
 /**
  * Created by mishrk3 on 6/13/2016.
  */
 public class DeepestElement {
 
-	public Node<Integer> findDeepestElement(Node<Integer> root) {
-		LinkedListQueue<Node<Integer>> queue = new LinkedListQueue<>();
-		Node<Integer> temp = null;
+	public SampleBinaryTree.Node<Integer> findDeepestElement(SampleBinaryTree.Node<Integer> root) {
+		LinkedListQueue<SampleBinaryTree.Node<Integer>> queue = new LinkedListQueue<>();
+		SampleBinaryTree.Node<Integer> temp = null;
 		if (null == root) {
 			return null;
 		}

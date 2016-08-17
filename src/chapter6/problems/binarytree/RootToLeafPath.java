@@ -1,13 +1,11 @@
-package chapter6.problems;
-
-import static chapter6.problems.SampleBinaryTree.Node;
+package chapter6.problems.binarytree;
 
 /**
  * Created by mishrk3 on 6/17/2016.
  */
 public class RootToLeafPath {
 
-	void printPath(Node<Integer> root, int[] paths, int pathLen) {
+	void printPath(SampleBinaryTree.Node<Integer> root, int[] paths, int pathLen) {
 		if (root == null) {
 			return;
 		}

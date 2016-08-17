@@ -1,19 +1,17 @@
-package chapter6.problems;
+package chapter6.problems.binarytree;
 
 import chapter5.LinkedListQueue;
-
-import static chapter6.problems.SampleBinaryTree.Node;
 
 /**
  * Created by mishrk3 on 5/24/2016.
  */
 public class InsertElement {
 
-	public void insertElement(Node<Integer> root, int data) {
-		Node<Integer> newNode = new Node<>(data, null, null);
-		Node<Integer> p = root;
-		Node<Integer> temp;
-		LinkedListQueue<Node<Integer>> queue = new LinkedListQueue<>();
+	public void insertElement(SampleBinaryTree.Node<Integer> root, int data) {
+		SampleBinaryTree.Node<Integer> newNode = new SampleBinaryTree.Node<>(data, null, null);
+		SampleBinaryTree.Node<Integer> p = root;
+		SampleBinaryTree.Node<Integer> temp;
+		LinkedListQueue<SampleBinaryTree.Node<Integer>> queue = new LinkedListQueue<>();
 		if (root == null) {
 			root = newNode;
 			return;

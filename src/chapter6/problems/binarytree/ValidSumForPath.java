@@ -1,13 +1,11 @@
-package chapter6.problems;
-
-import static chapter6.problems.SampleBinaryTree.Node;
+package chapter6.problems.binarytree;
 
 /**
  * Created by mishrk3 on 6/17/2016.
  */
 public class ValidSumForPath {
 
-	public boolean isValidSum(Node<Integer> root, int sum) {
+	public boolean isValidSum(SampleBinaryTree.Node<Integer> root, int sum) {
 		if (root == null) {
 			return sum == 0;
 		} else {

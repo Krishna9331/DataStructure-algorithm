@@ -1,16 +1,12 @@
-package chapter6.problems;
-
-import chapter5.LinkedListQueue;
-
-import static chapter6.problems.SampleBinaryTree.Node;
+package chapter6.problems.binarytree;
 
 /**
  * Created by mishrk3 on 5/21/2016.
  */
 public class FindMax {
 
-	public int findMax(Node<Integer> root) {
-		Node<Integer> p = root;
+	public int findMax(SampleBinaryTree.Node<Integer> root) {
+		SampleBinaryTree.Node<Integer> p = root;
 		int rootVal, left, right, max = Integer.MIN_VALUE;
 		if (null != p) {
 			rootVal = p.item;
