@@ -1,4 +1,4 @@
-package chapter6;
+package chapter6.problems.binarytree;
 
 import chapter4.LinkedListStack;
 import chapter5.LinkedListQueue;
