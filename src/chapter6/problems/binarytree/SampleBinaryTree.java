@@ -8,9 +8,9 @@ public class SampleBinaryTree<E> {
 	private Node<E> root;
 
 	public static class Node<E> {
-		E item;
-		Node<E> left;
-		Node<E> right;
+		public E item;
+		public Node<E> left;
+		public Node<E> right;
 
 		public Node(E item, Node<E> left, Node<E> right) {
 			this.item = item;
@@ -18,7 +18,8 @@ public class SampleBinaryTree<E> {
 			this.right = right;
 		}
 
-		@Override public boolean equals(Object o) {
+		@Override
+		public boolean equals(Object o) {
 			if (this == o)
 				return true;
 			if (o == null || getClass() != o.getClass())
@@ -34,7 +35,8 @@ public class SampleBinaryTree<E> {
 
 		}
 
-		@Override public int hashCode() {
+		@Override
+		public int hashCode() {
 			int result = 0;
 			if (null != item) {
 				result = item.hashCode();
