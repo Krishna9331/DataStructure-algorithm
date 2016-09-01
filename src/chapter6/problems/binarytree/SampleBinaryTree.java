@@ -83,4 +83,28 @@ public class SampleBinaryTree<E> {
 		tree.root.right.right = new Node<>(7, null, null);
 		return tree;
 	}
+
+	public static SampleBinaryTree<Integer> getDefaultBST() {
+		SampleBinaryTree<Integer> tree = new SampleBinaryTree<>();
+		tree.root = new Node<>(20, null, null);
+		tree.root.left = new Node<>(10, null, null);
+		tree.root.right = new Node<>(30, null, null);
+
+		tree.root.left.left = new Node<>(5, null, null);
+		tree.root.left.left.left = new Node<>(2, null, null);
+		tree.root.left.left.right = new Node<>(7, null, null);
+		tree.root.left.right = new Node<>(15, null, null);
+		tree.root.left.right.left = new Node<>(12, null, null);
+		tree.root.left.right.right = new Node<>(18, null, null);
+
+		tree.root.right = new Node<>(30, null, null);
+		tree.root.right.left = new Node<>(25, null, null);
+		tree.root.right.right = new Node<>(40, null, null);
+		tree.root.right.right.left = new Node<>(35, null, null);
+		tree.root.right.right.right = new Node<>(45, null, null);
+		tree.root.right.left.left = new Node<>(22, null, null);
+		tree.root.right.left.right = new Node<>(27, null, null);
+
+		return tree;
+	}
 }
