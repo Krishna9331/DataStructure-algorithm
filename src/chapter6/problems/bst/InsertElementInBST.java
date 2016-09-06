@@ -5,7 +5,7 @@ import static chapter6.problems.binarytree.SampleBinaryTree.Node;
 /**
  * Created by mishrk3 on 9/6/2016.
  */
-public class InsertElement {
+public class InsertElementInBST {
 
 	/**
 	 * Time Complexity = O(n) Space Complexity = O(n)
@@ -57,7 +57,7 @@ public class InsertElement {
 	}
 
 	public static void main(String[] args) {
-		InsertElement ie = new InsertElement();
+		InsertElementInBST ie = new InsertElementInBST();
 		Node<Integer> root = ie.insertInBST(null, 30);
 		ie.insertInBST(root, 40);
 		ie.insertInBST(root, 10);
