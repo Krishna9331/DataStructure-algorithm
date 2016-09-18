@@ -40,7 +40,7 @@ import chapter6.problems.binarytree.SampleBinaryTree;
  *
  * </pre>
  */
-public class BSTToDLL {
+public class BSTToCircularDLL {
 
 	/**
 	 * The append method is the conquer phase in below code. where it takes two node and connect to each other and
@@ -93,9 +93,9 @@ public class BSTToDLL {
 	}
 
 	public static void main(String[] args) {
-		BSTToDLL bstToDLL = new BSTToDLL();
+		BSTToCircularDLL bstToCircularDLL = new BSTToCircularDLL();
 		SampleBinaryTree tree = SampleBinaryTree.getSmallBST();
-		Node<Integer> head = bstToDLL.treeToList(tree.getRoot());
+		Node<Integer> head = bstToCircularDLL.treeToList(tree.getRoot());
 		Node<Integer> temp = head;
 		do {
 			System.out.print(temp.item + "-->");
