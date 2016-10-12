@@ -50,5 +50,22 @@ public class InsertIntoAVL {
 		Node<Integer> root2 = intoAVL.insertInAVL(root1, root, 3);
 		Node<Integer> root3 = intoAVL.insertInAVL(root2, root, 4);
 		Node<Integer> finalRoot = intoAVL.insertInAVL(root3, root, 5);
+		System.out.println("The root of the tree now: " + finalRoot.data);
+
+		InsertIntoAVL intoAVL1 = new InsertIntoAVL();
+		Node<Integer> rootA = intoAVL1.insertInAVL(null, null, 9);
+		Node<Integer> rootA1 = intoAVL1.insertInAVL(rootA, root, 6);
+		Node<Integer> rootA2 = intoAVL1.insertInAVL(rootA1, root, 7);
+		Node<Integer> rootA3 = intoAVL1.insertInAVL(rootA2, root, 4);
+		Node<Integer> finalRootA = intoAVL1.insertInAVL(rootA3, root, 5);
+		System.out.println("The root of the tree now: " + finalRootA.data);
+
+		InsertIntoAVL intoAVL2 = new InsertIntoAVL();
+		Node<Integer> rootB = intoAVL2.insertInAVL(null, null, 7);
+		Node<Integer> rootB1 = intoAVL2.insertInAVL(rootB, root, 9);
+		Node<Integer> rootB2 = intoAVL2.insertInAVL(rootB1, root, 6);
+		Node<Integer> rootB3 = intoAVL2.insertInAVL(rootB2, root, 4);
+		Node<Integer> finalRootB = intoAVL2.insertInAVL(rootB3, root, 5);
+		System.out.println("The root of the tree now: " + finalRootB.data);
 	}
 }
