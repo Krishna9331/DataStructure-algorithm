@@ -122,4 +122,22 @@ public class SampleBinaryTree<E> {
 
 		return tree;
 	}
+
+	public static SampleBinaryTree<Integer> getNonAVLTree() {
+		SampleBinaryTree<Integer> tree = new SampleBinaryTree<>();
+		tree.root = new Node<>(20, null, null);
+		tree.root.left = new Node<>(10, null, null);
+		tree.root.right = new Node<>(30, null, null);
+
+		tree.root.left.left = new Node<>(5, null, null);
+		tree.root.left.right = new Node<>(15, null, null);
+
+		tree.root.right.left = new Node<>(25, null, null);
+		tree.root.right.right = new Node<>(40, null, null);
+		tree.root.right.right.right = new Node<>(42, null, null);
+		tree.root.right.right.right.right = new Node<>(43, null, null);
+		tree.root.right.right.right.right.right = new Node<>(45, null, null);
+
+		return tree;
+	}
 }
