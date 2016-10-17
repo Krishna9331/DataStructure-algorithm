@@ -61,4 +61,21 @@ public class AVLTree<E> {
 		root.right = singleRotateLeft(root.right);
 		return singleRotateRight(root);
 	}
+
+	public static AVLTree<Integer> getSampleAVLTree() {
+		AVLTree tree = new AVLTree();
+		InsertIntoAVL intoAVL = new InsertIntoAVL();
+		Node<Integer> root = intoAVL.insertInAVL(null, null, 1);
+		Node<Integer> root1 = intoAVL.insertInAVL(root, root, 2);
+		Node<Integer> root2 = intoAVL.insertInAVL(root1, root, 3);
+		Node<Integer> root3 = intoAVL.insertInAVL(root2, root, 4);
+		Node<Integer> finalRoot = intoAVL.insertInAVL(root3, root, 5);
+		Node<Integer> finalRoot1 = intoAVL.insertInAVL(finalRoot, root, 7);
+		Node<Integer> finalRoot2 = intoAVL.insertInAVL(finalRoot1, root, 9);
+		Node<Integer> finalRoot3 = intoAVL.insertInAVL(finalRoot2, root, 8);
+		Node<Integer> finalRoot4 = intoAVL.insertInAVL(finalRoot3, root, 11);
+		Node<Integer> finalRoot5 = intoAVL.insertInAVL(finalRoot4, root, 6);
+		tree.root = finalRoot5;
+		return tree;
+	}
 }
