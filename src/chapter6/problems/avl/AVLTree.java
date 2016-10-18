@@ -78,4 +78,26 @@ public class AVLTree<E> {
 		tree.root = finalRoot5;
 		return tree;
 	}
+
+	/**
+	 * This tree is customized AVL tree each node contains number of nodes it has in subtrees in place of height of that
+	 * node.
+	 *
+	 * @return AVL Tree
+	 */
+	public static AVLTree getCustomizedTree() {
+		AVLTree tree = new AVLTree();
+		Node<Integer> root = new Node<>(6, null, null, 6);
+		tree.root = root;
+		root.left = new Node<>(4, null, null, 2);
+		root.right = new Node<>(9, null, null, 2);
+
+		root.left.left = new Node<>(2, null, null, 0);
+		root.left.right = new Node<>(5, null, null, 0);
+
+		root.right.left = new Node<>(7, null, null, 1);
+
+		root.right.left.right = new Node<>(8, null, null, 0);
+		return tree;
+	}
 }
