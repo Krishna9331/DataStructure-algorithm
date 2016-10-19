@@ -140,4 +140,23 @@ public class SampleBinaryTree<E> {
 
 		return tree;
 	}
+
+	public static SampleBinaryTree<Integer> createBinaryTreeWithHalfRootNode() {
+		SampleBinaryTree<Integer> tree = new SampleBinaryTree<>();
+		Node<Integer> root = new Node<>(40, null, null);
+		tree.setRoot(root);
+		root.left = new Node<>(20, null, null);
+
+		root.left.left = new Node<>(10, null, null);
+		root.left.right = new Node<>(30, null, null);
+
+		root.left.left.left = new Node<>(5, null, null);
+		root.left.left.left.left = new Node<>(2, null, null);
+
+		root.left.right.left = new Node<>(25, null, null);
+		root.left.right.right = new Node<>(35, null, null);
+		root.left.right.right.left = new Node<>(33, null, null);
+		root.left.right.right.left.left = new Node<>(31, null, null);
+		return tree;
+	}
 }
