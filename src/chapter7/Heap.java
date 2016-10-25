@@ -1,19 +1,22 @@
 package chapter7;
 
+import java.lang.reflect.Array;
+
 /**
  * Created by mishrk3 on 10/21/2016.
  */
 public class Heap<E> {
+	public static final String MAX_HEAP = "max";
 	E[] elements;
 	int count; // number of element in heap
 	int capacity; // size of the heap
-	int heapType; // Min Heap or Max Heap
+	String heapType; // Min Heap or Max Heap
 
-	public Heap(int capacity, int heapType) {
+	public Heap(int capacity, String heapType, Class<E> clazz) {
 		this.count = 0;
 		this.capacity = capacity;
 		this.heapType = heapType;
-		elements = (E[]) new Object[capacity];
+		elements = (E[]) Array.newInstance(clazz, capacity);
 	}
 
 	/**
@@ -25,7 +28,7 @@ public class Heap<E> {
 	 *            the index of element for which parent need to be found in @heap
 	 * @return index of parent of element at i or -1 if not found
 	 */
-	public int getParent(Heap<Integer> heap, int i) {
+	public static int getParent(Heap<Integer> heap, int i) {
 		if (i <= 0 || i > heap.count) {
 			return -1;
 		}
@@ -41,9 +44,9 @@ public class Heap<E> {
 	 *            index of parent for which left child need to be found
 	 * @return index of the left child or -1 if not found
 	 */
-	public int getLeftChild(Heap<Integer> heap, int i) {
+	public static int getLeftChild(Heap<Integer> heap, int i) {
 		int left = 2 * i + 1;
-		if (left > heap.count) {
+		if (left > heap.count - 1) {
 			return -1;
 		}
 		return left;
@@ -58,9 +61,9 @@ public class Heap<E> {
 	 *            index of parent for which right child need to be found
 	 * @return index of the right child or -1 if not found
 	 */
-	public int getRightChild(Heap<Integer> heap, int i) {
+	public static int getRightChild(Heap<Integer> heap, int i) {
 		int right = 2 * i + 2;
-		if (right > heap.count) {
+		if (right > heap.count - 1) {
 			return -1;
 		}
 		return right;
@@ -73,10 +76,39 @@ public class Heap<E> {
 	 *            The heap
 	 * @return max element in heap or -1 if heap is empty
 	 */
-	public int MaxElement(Heap<Integer> heap) {
+	public static int MaxElement(Heap<Integer> heap) {
 		if (heap.count == 0) {
 			return -1;
 		}
 		return heap.elements[0];
+	}
+
+	/**
+	 * @return Heap of Integer which violates the heap property at position 2
+	 */
+	public static Heap<Integer> getMaxUnHeap() {
+		Heap<Integer> heap = new Heap<>(7, MAX_HEAP, Integer.class);
+		heap.elements[0] = 17;
+		heap.elements[1] = 13;
+		heap.elements[2] = 3;
+		heap.elements[3] = 1;
+		heap.elements[4] = 4;
+		heap.elements[5] = 2;
+		heap.elements[6] = 5;
+		heap.count = 7;
+		return heap;
+	}
+
+	public static Heap<Integer> getMaxHeap() {
+		Heap<Integer> heap = new Heap<>(7, MAX_HEAP, Integer.class);
+		heap.elements[0] = 17;
+		heap.elements[1] = 13;
+		heap.elements[2] = 6;
+		heap.elements[3] = 1;
+		heap.elements[4] = 4;
+		heap.elements[5] = 2;
+		heap.elements[6] = 5;
+		heap.count = 7;
+		return heap;
 	}
 }

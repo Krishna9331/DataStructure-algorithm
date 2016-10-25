@@ -71,7 +71,8 @@ public class LoopInLinkedList<E> {
 	}
 
 	/**
-	 * explanation : http://learningarsenal.info/index.php/2015/08/24/detecting-start-of-a-loop-in-singly-linked-list/
+	 * explanation :
+	 * http://stackoverflow.com/questions/2936213/explain-how-finding-cycle-start-node-in-cycle-linked-list-work
 	 */
 	public E findFirstElementOfLoop() {
 		boolean hasLoop = false;
