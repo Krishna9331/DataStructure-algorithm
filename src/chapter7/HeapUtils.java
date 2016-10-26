@@ -16,9 +16,9 @@ public class HeapUtils {
 	 * @param heap
 	 *            The heap
 	 * @param i
-	 *            the location where we need to heapify the element.
+	 *            the location where we need to heapifyMax the element.
 	 */
-	public static void heapify(Heap<Integer> heap, int i) {
+	public static void heapifyMax(Heap<Integer> heap, int i) {
 		int leftChildIndex, rightChildIndex, max, temp;
 		leftChildIndex = Heap.getLeftChild(heap, i);
 		rightChildIndex = Heap.getRightChild(heap, i);
@@ -37,16 +37,38 @@ public class HeapUtils {
 		} else {
 			return;
 		}
-		heapify(heap, max);
+		heapifyMax(heap, max);
+	}
+
+	public static void heapifyMin(Heap<Integer> heap, int i) {
+		int leftChildIndex, rightChildIndex, min, temp;
+		leftChildIndex = Heap.getLeftChild(heap, i);
+		rightChildIndex = Heap.getRightChild(heap, i);
+		if (leftChildIndex != -1 && heap.elements[leftChildIndex] < heap.elements[i]) {
+			min = leftChildIndex;
+		} else {
+			min = i;
+		}
+		if (rightChildIndex != -1 && heap.elements[rightChildIndex] < heap.elements[min]) {
+			min = rightChildIndex;
+		}
+		if (min != i) {
+			temp = heap.elements[i];
+			heap.elements[i] = heap.elements[min];
+			heap.elements[min] = temp;
+		} else {
+			return;
+		}
+		heapifyMin(heap, min);
 	}
 
 	/**
-	 * To delete an element from heap, we just need to delete the root. This is the only operation supported by standard
-	 * heap. Algorithm is as below: <br/>
+	 * To deleteMaxHeap an element from heap, we just need to deleteMaxHeap the root. This is the only operation
+	 * supported by standard heap. Algorithm is as below: <br/>
 	 * <pre>
 	 *     1. Copy the root/first element into some variable
 	 *     2. Copy the last element into the root element location.
-	 *     3. Percolate down/heapify the root element
+	 *     3. Percolate down/heapifyMax the root element
 	 *
 	 * </pre>
 	 * 
@@ -54,7 +76,7 @@ public class HeapUtils {
 	 *            The heap
 	 * @return the deleted element or root
 	 */
-	public static int delete(Heap<Integer> heap) {
+	public static int deleteMaxHeap(Heap<Integer> heap) {
 		int temp;
 		if (heap.count == 0) {
 			return -1;
@@ -62,12 +84,24 @@ public class HeapUtils {
 		temp = heap.elements[0];
 		heap.elements[0] = heap.elements[heap.count - 1];
 		heap.count--;
-		heapify(heap, 0);
+		heapifyMax(heap, 0);
+		return temp;
+	}
+
+	public static int deleteMinHeap(Heap<Integer> heap) {
+		int temp;
+		if (heap.count == 0) {
+			return -1;
+		}
+		temp = heap.elements[0];
+		heap.elements[0] = heap.elements[heap.count - 1];
+		heap.count--;
+		heapifyMin(heap, 0);
 		return temp;
 	}
 
 	/**
-	 * The insert follow below principle: <br/>
+	 * The insertIntoMaxHeap follow below principle: <br/>
 	 * <pre>
 	 *     1. Increase the heap size if it is full
 	 *     2. Keep the new element at the end of the heap tree
@@ -81,7 +115,7 @@ public class HeapUtils {
 	 *            the item need to be inserted in heap
 	 * @return index of the inserted item
 	 */
-	public static int insert(Heap<Integer> heap, int data) {
+	public static int insertIntoMaxHeap(Heap<Integer> heap, int data) {
 		int i;
 		if (heap.count == heap.capacity) {
 			resizeHeap(heap);
@@ -89,6 +123,28 @@ public class HeapUtils {
 		heap.count++;
 		i = heap.count - 1;
 		while (i > 0 && data > heap.elements[(i - 1) / 2]) {
+			heap.elements[i] = heap.elements[(i - 1) / 2];
+			i = (i - 1) / 2;
+		}
+		heap.elements[i] = data;
+		return i;
+	}
+
+	/**
+	 * @param heap
+	 *            The heap
+	 * @param data
+	 *            the item need to be inserted in heap
+	 * @return index of the inserted item
+	 */
+	public static int insertIntoMinHeap(Heap<Integer> heap, int data) {
+		int i;
+		if (heap.count == heap.capacity) {
+			resizeHeap(heap);
+		}
+		heap.count++;
+		i = heap.count - 1;
+		while (i > 0 && data < heap.elements[(i - 1) / 2]) {
 			heap.elements[i] = heap.elements[(i - 1) / 2];
 			i = (i - 1) / 2;
 		}
@@ -110,7 +166,7 @@ public class HeapUtils {
 	public static void main(String[] args) {
 		HeapUtils heapUtils = new HeapUtils();
 		Heap<Integer> heap = Heap.getMaxUnHeap();
-		heapUtils.heapify(heap, 2);
+		heapUtils.heapifyMax(heap, 2);
 		System.out.println("Heapified the passed heap : " + heap);
 	}
 }

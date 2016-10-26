@@ -12,7 +12,7 @@ import static chapter6.problems.treadedBinaryTree.ThreadedBinaryTree.Node;
 public class InsertNodeInInorderThreadedBTree {
 
 	/**
-	 * The logic of the code is to insert the data on right of the given node. We can similarly do if we insert in left
+	 * The logic of the code is to insertIntoMaxHeap the data on right of the given node. We can similarly do if we insertIntoMaxHeap in left
 	 * of that.
 	 * 
 	 * @param node

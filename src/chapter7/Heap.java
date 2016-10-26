@@ -7,10 +7,10 @@ import java.lang.reflect.Array;
  */
 public class Heap<E> {
 	public static final String MAX_HEAP = "max";
-	E[] elements;
-	int count; // number of element in heap
-	int capacity; // size of the heap
-	String heapType; // Min Heap or Max Heap
+	public E[] elements;
+	public int count; // number of element in heap
+	public int capacity; // size of the heap
+	public String heapType; // Min Heap or Max Heap
 
 	public Heap(int capacity, String heapType, Class<E> clazz) {
 		this.count = 0;
@@ -74,9 +74,9 @@ public class Heap<E> {
 	 * 
 	 * @param heap
 	 *            The heap
-	 * @return max element in heap or -1 if heap is empty
+	 * @return max element for Max heap or min element for min heap or -1 if heap is empty
 	 */
-	public static int MaxElement(Heap<Integer> heap) {
+	public static int getRootElement(Heap<Integer> heap) {
 		if (heap.count == 0) {
 			return -1;
 		}
@@ -109,6 +109,24 @@ public class Heap<E> {
 		heap.elements[5] = 2;
 		heap.elements[6] = 5;
 		heap.count = 7;
+		return heap;
+	}
+
+	public static Heap<Integer> getMinHeap() {
+		Heap<Integer> heap = new Heap<>(12, MAX_HEAP, Integer.class);
+		heap.elements[0] = 1;
+		heap.elements[1] = 5;
+		heap.elements[2] = 14;
+		heap.elements[3] = 2;
+		heap.elements[4] = 10;
+		heap.elements[5] = 21;
+		heap.elements[6] = 18;
+		heap.elements[7] = 3;
+		heap.elements[8] = 11;
+		heap.elements[9] = 28;
+		heap.elements[10] = 37;
+		heap.elements[11] = 42;
+		heap.count = 12;
 		return heap;
 	}
 }

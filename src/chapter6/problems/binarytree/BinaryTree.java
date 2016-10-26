@@ -106,7 +106,7 @@ public class BinaryTree<E> {
 	 * 1) push the root in stack
 	 * 2) make left child of root as new root
 	 * 3)continue step 1 and 2 until root is not null
-	 * So using above will insert all the left element in stack starting from root to left most leaf.
+	 * So using above will insertIntoMaxHeap all the left element in stack starting from root to left most leaf.
 	 * The left will be at top.
 	 * 4)if step 3 breaks(means if there is no more left child or we reached leaf node), then check if stack is empty
 	 * 5)if step 4 is true break and exit

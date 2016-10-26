@@ -33,7 +33,7 @@ public class FindMax {
 		System.out.println("The max element is: " + fm.findMax(tree.getRoot()));
 
 		/*System.out.println("The number 13 is present in tree- Non recursive: " + tree.searchNonRecursive(13));
-		System.out.println("insert 13 in Binary tree");
+		System.out.println("insertIntoMaxHeap 13 in Binary tree");
 		tree.insertElement(13);
 		System.out.println("The number 13 is present in tree- Non recursive: " + tree.searchNonRecursive(13));*/
 	}

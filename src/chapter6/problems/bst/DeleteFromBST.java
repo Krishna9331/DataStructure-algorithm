@@ -19,7 +19,7 @@ public class DeleteFromBST {
 	 * 3)Node has both the child: In this scenario replace the to be deleted node with the largest element in the left
 	 * subtree of node and then recursively deleted the node which has replace the to be deleted node. <br/>
 	 * <br/>
-	 * So we have to first find the element and then delete it using above three conditions.
+	 * So we have to first find the element and then deleteMaxHeap it using above three conditions.
 	 * 
 	 * @param root
 	 *            the root of the tree

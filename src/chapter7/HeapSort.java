@@ -5,8 +5,8 @@ package chapter7;
  */
 
 /**
- * One of the main Application of heap ADT is sorting. Heap sort insert all the element from an unsorted array to heap
- * and then delete the root continuously until heap is empty.
+ * One of the main Application of heap ADT is sorting. Heap sort insertIntoMaxHeap all the element from an unsorted array to heap
+ * and then deleteMaxHeap the root continuously until heap is empty.
  */
 public class HeapSort {
 
@@ -27,7 +27,7 @@ public class HeapSort {
 			heap.elements[0] = heap.elements[heap.count - 1];
 			heap.elements[heap.count - 1] = temp;
 			heap.count--;
-			HeapUtils.heapify(heap, 0);
+			HeapUtils.heapifyMax(heap, 0);
 		}
 		heap.count = oldSize;
 		return heap.elements;
@@ -55,7 +55,7 @@ public class HeapSort {
 		}
 		heap.count = n;
 		for (int i = (n - 1) / 2; i >= 0; i--) {
-			HeapUtils.heapify(heap, i);
+			HeapUtils.heapifyMax(heap, i);
 		}
 	}
 
