@@ -18,6 +18,10 @@ public class DEQueue<E> {
 		}
 	}
 
+	public boolean isEmpty() {
+		return head == null;
+	}
+
 	public void pushBackDEQ(E data) {
 		Node<E> newNode = new Node<>(data, null, null);
 		if (null == head) {
@@ -49,6 +53,17 @@ public class DEQueue<E> {
 			head.prev = temp;
 		}
 		return data;
+	}
+
+	public E getFront() {
+		return head.item;
+	}
+
+	public E getBack() {
+		if (head != null) {
+			return head.prev.item;
+		}
+		return null;
 	}
 
 	public E popFrontDEQ() {
