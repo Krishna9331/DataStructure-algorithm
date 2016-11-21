@@ -12,6 +12,12 @@ public class GraphUsingMatrix {
 	public int edge;
 	public int[][] adjacent;
 
+	public GraphUsingMatrix(int vertex, int edge, int[][] adjacent) {
+		this.vertex = vertex;
+		this.edge = edge;
+		this.adjacent = adjacent;
+	}
+
 	public GraphUsingMatrix(int vertex, int edge) {
 		this.vertex = vertex;
 		this.edge = edge;
