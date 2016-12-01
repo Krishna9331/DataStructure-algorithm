@@ -7,9 +7,8 @@ import java.io.InputStreamReader;
 /**
  * Created by mishrk3 on 11/11/2016.
  */
-public class GraphUsingMatrix {
-	public int vertex;
-	public int edge;
+public class GraphUsingMatrix extends Graph {
+
 	public int[][] adjacent;
 
 	public GraphUsingMatrix(int vertex, int edge, int[][] adjacent) {

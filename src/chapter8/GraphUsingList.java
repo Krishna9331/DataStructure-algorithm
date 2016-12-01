@@ -7,10 +7,8 @@ import java.io.InputStreamReader;
 /**
  * Created by mishrk3 on 11/18/2016.
  */
-public class GraphUsingList {
+public class GraphUsingList extends Graph {
 
-	int vertex;
-	int edge;
 	ListNode[] adjacent; // contains head pointer to linked list
 
 	public static class ListNode {
