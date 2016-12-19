@@ -118,4 +118,33 @@ public class SinglyLinkedList<E> {
 		return list;
 	}
 
+	public static SinglyLinkedList getSortedListWithDuplicates() {
+		SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+		list.add(2);
+		list.add(2);
+		list.add(5);
+		list.add(7);
+		list.add(7);
+		list.add(7);
+		list.add(9);
+		list.add(11);
+		list.add(11);
+		list.add(11);
+		list.add(11);
+		list.add(15);
+		return list;
+	}
+
+	public static SinglyLinkedList getSortedListWithSameElements() {
+		SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+		list.add(1);
+		list.add(1);
+		list.add(1);
+		list.add(1);
+		list.add(1);
+		list.add(1);
+		list.add(1);
+		return list;
+	}
+
 }
