@@ -72,8 +72,10 @@ public class LargestRectangleInHistogram {
 
 	public static void main(String[] args) {
 		LargestRectangleInHistogram lrh = new LargestRectangleInHistogram();
-		int[] input = { 3, 2, 5, 6, 1, 4, 4 };
-		int result = lrh.maxRectangleArea(input, 7);
+//		int[] input = { 3, 2, 5, 6, 1, 4, 4 };
+		int[] input = { 1, 2, 3, 4, 5 };
+		int result = lrh.maxRectangleArea(input, 5);
+//		int result = lrh.maxRectangleArea(input, 7);
 		System.out.println("Max Possible area of rectangle :" + result);
 	}
 
