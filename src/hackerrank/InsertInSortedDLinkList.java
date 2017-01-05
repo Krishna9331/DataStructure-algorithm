@@ -1,6 +1,4 @@
-package generalproblem;
-
-import java.util.Stack;
+package hackerrank;
 
 /**
  * Created by mishrk3 on 12/21/2016.

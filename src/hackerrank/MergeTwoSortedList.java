@@ -1,4 +1,4 @@
-package generalproblem;
+package hackerrank;
 
 /**
  * Created by mishrk3 on 12/15/2016.
