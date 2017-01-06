@@ -33,7 +33,7 @@ public class GraphUsingMatrix extends Graph {
 				String[] st = br.readLine().split(" ");
 				int x = Integer.parseInt(st[0]);
 				int y = Integer.parseInt(st[1]);
-				if (adjacent[x][y] == 1 || adjacent[y][x] == 1) {
+				if (adjacent[x][y] == 1 || adjacent[y][x] == 1 || x >= vertex || y >= vertex) {
 					throw new IOException();
 				}
 				adjacent[x][y] = 1;
@@ -45,10 +45,10 @@ public class GraphUsingMatrix extends Graph {
 		}
 	}
 
-	public static void displayGraph(GraphUsingMatrix graph) {
-		for (int i = 0; i < graph.vertex; i++) {
-			for (int j = 0; j < graph.vertex; j++) {
-				System.out.print(graph.adjacent[i][j] + " ");
+	public void displayGraph() {
+		for (int i = 0; i < vertex; i++) {
+			for (int j = 0; j < vertex; j++) {
+				System.out.print(adjacent[i][j] + " ");
 			}
 			System.out.println();
 		}
@@ -56,6 +56,6 @@ public class GraphUsingMatrix extends Graph {
 
 	public static void main(String[] args) {
 		GraphUsingMatrix graph = new GraphUsingMatrix(4, 5);
-		displayGraph(graph);
+		graph.displayGraph();
 	}
 }

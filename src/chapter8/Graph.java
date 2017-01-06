@@ -6,4 +6,6 @@ package chapter8;
 public abstract class Graph {
 	public int vertex;
 	public int edge;
+
+	public abstract void displayGraph();
 }

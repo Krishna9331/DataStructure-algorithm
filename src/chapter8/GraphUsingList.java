@@ -41,11 +41,13 @@ public class GraphUsingList extends Graph {
 				String[] st = br.readLine().split(" ");
 				int x = Integer.parseInt(st[0]);
 				int y = Integer.parseInt(st[1]);
+				if (x >= vertex || y >= vertex) {
+					throw new IOException();
+				}
 				ListNode temp = new ListNode(y, null);
 				ListNode q = adjacent[x];
 				temp.next = adjacent[x];
 				while (q.next != adjacent[x]) {
-					q = adjacent[x];
 					q = q.next;
 				}
 				q.next = temp;
@@ -60,10 +62,10 @@ public class GraphUsingList extends Graph {
 	public static void main(String[] args) {
 		GraphUsingList graph = new GraphUsingList(4, 5);
 		System.out.println("Graph is created, displaying graph...");
-		graph.display();
+		graph.displayGraph();
 	}
 
-	private void display() {
+	public void displayGraph() {
 		for (ListNode list : adjacent) {
 			ListNode q = list;
 			do {
