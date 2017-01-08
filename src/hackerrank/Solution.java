@@ -1,25 +1,26 @@
 package hackerrank;
 
+import java.io.BufferedReader;
 import java.util.*;
 
 public class Solution {
 
 	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
-		int n = 26;
-		int h[] = new int[n];
-		for (int h_i = 0; h_i < n; h_i++) {
-			h[h_i] = in.nextInt();
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+		int p = 0;
+		for(int i = 0; i < t; i++){
+			int n = sc.nextInt();
+			int m = sc.nextInt();
+			int s = sc.nextInt();
+			p = (s + (m-1))%n;
+			System.out.println(p);
 		}
-		int maxHeight = 0;
-		String word = in.next();
-		int length = word.length();
-		for (int i = 0; i < length; i++) {
-			int height = h[word.charAt(i) - 97];
-			if (h[word.charAt(i) - 97] > maxHeight) {
-				maxHeight = height;
-			}
-		}
-		System.out.println(maxHeight*length*1);
 	}
+}
+
+abstract class One{
+	public abstract void m1();
+}
+abstract class Two extends One{
 }

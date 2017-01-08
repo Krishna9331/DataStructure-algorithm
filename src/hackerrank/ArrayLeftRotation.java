@@ -3,9 +3,7 @@ package hackerrank;
 import java.util.Scanner;
 
 /**
- * Created by mishrk3 on 12/12/2016.
- *
- * <pre>
+ * Created by mishrk3 on 12/12/2016. <pre>
  *
  *     A left rotation operation on an array of size  shifts each of the array's elements  unit to the left. For example, if left rotations are performed on array , then the array would become .
 
@@ -38,7 +36,7 @@ import java.util.Scanner;
  */
 public class ArrayLeftRotation {
 	public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+		/* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();
 		int k = in.nextInt();
@@ -46,20 +44,19 @@ public class ArrayLeftRotation {
 		for (int a_i = 0; a_i < n; a_i++) {
 			a[a_i] = in.nextInt();
 		}
-		int l = k%n;
+		int l = k % n;
 		swapElements(a, 0, l - 1);
 		swapElements(a, l, n - 1);
 		swapElements(a, 0, n - 1);
 
 		for (int a0 = 0; a0 < n; a0++) {
-			System.out.print(a[a0] +" ");
+			System.out.print(a[a0] + " ");
 		}
 	}
 
 	public static void swapElements(int[] array, int startIndex, int endIndex) {
 		int temp = 0;
-		while (startIndex < endIndex)
-		{
+		while (startIndex < endIndex) {
 			temp = array[startIndex];
 			array[startIndex] = array[endIndex];
 			array[endIndex] = temp;
