@@ -11,13 +11,23 @@ public class GraphUsingList extends Graph {
 
 	public ListNode[] adjacent; // contains head pointer to linked list
 
-	public static class ListNode {
+	public static class ListNode implements Comparable<ListNode> {
 		public int vertexNumber;
 		public ListNode next;
+		public int weight;
 
 		public ListNode(int vertexNumber, ListNode next) {
 			this.vertexNumber = vertexNumber;
 			this.next = next;
+			this.weight = 1;
+		}
+
+		@Override
+		public int compareTo(ListNode node) {
+			if (this.vertexNumber == node.vertexNumber) {
+				return 0;
+			}
+			return this.weight - node.weight;
 		}
 	}
 
@@ -44,7 +54,12 @@ public class GraphUsingList extends Graph {
 				if (x >= vertex || y >= vertex) {
 					throw new IOException();
 				}
+				int w = 1;
+				if (st.length > 2) {
+					w = Integer.parseInt(st[2]);
+				}
 				ListNode temp = new ListNode(y, null);
+				temp.weight = w;
 				ListNode q = adjacent[x];
 				temp.next = adjacent[x];
 				while (q.next != adjacent[x]) {
