@@ -12,8 +12,8 @@ public class GraphUsingList extends Graph {
 	public ListNode[] adjacent; // contains head pointer to linked list
 
 	public static class ListNode {
-		int vertexNumber;
-		ListNode next;
+		public int vertexNumber;
+		public ListNode next;
 
 		public ListNode(int vertexNumber, ListNode next) {
 			this.vertexNumber = vertexNumber;

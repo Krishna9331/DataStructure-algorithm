@@ -36,7 +36,7 @@ public class Heap<E> {
 	}
 
 	/**
-	 * As per heap property for an element at i it's left child will be at 2*1 +1 position
+	 * As per heap property for an element at i it's left child will be at 2*i +1 position
 	 *
 	 * @param heap
 	 *            The heap
