@@ -15,15 +15,16 @@ public class GraphUsingList extends Graph {
 		public int vertexNumber;
 		public ListNode next;
 		public int weight;
+		public boolean visited; //used in bellmanford algo
 
 		public ListNode(int vertexNumber, ListNode next) {
 			this.vertexNumber = vertexNumber;
 			this.next = next;
 			this.weight = 1;
+			this.visited = false;
 		}
 
-		@Override
-		public int compareTo(ListNode node) {
+		@Override public int compareTo(ListNode node) {
 			return this.weight - node.weight;
 		}
 	}
