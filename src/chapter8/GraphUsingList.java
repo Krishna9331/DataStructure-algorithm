@@ -24,9 +24,6 @@ public class GraphUsingList extends Graph {
 
 		@Override
 		public int compareTo(ListNode node) {
-			if (this.vertexNumber == node.vertexNumber) {
-				return 0;
-			}
 			return this.weight - node.weight;
 		}
 	}
