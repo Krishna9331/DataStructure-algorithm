@@ -1,8 +1,8 @@
-package chapter8.shortestPath;
+package chapter9.shortestPath;
 
 import chapter5.LinkedListQueue;
-import chapter8.GraphUsingList;
-import static chapter8.GraphUsingList.ListNode;
+import chapter9.GraphUsingList;
+import static chapter9.GraphUsingList.ListNode;
 
 /**
  * Created by mishrk3 on 1/10/2017. <pre>

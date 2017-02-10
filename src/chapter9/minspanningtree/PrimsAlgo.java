@@ -1,7 +1,7 @@
-package chapter8.minspanningtree;
+package chapter9.minspanningtree;
 
-import chapter8.GraphUsingList;
-import chapter8.GraphUsingList.ListNode;
+import chapter9.GraphUsingList;
+import chapter9.GraphUsingList.ListNode;
 
 import java.util.Iterator;
 import java.util.PriorityQueue;

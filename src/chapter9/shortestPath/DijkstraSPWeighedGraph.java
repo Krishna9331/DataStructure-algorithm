@@ -1,4 +1,4 @@
-package chapter8.shortestPath;
+package chapter9.shortestPath;
 
 /**
  * Created by mishrk3 on 1/26/2017.
@@ -7,9 +7,9 @@ package chapter8.shortestPath;
 import java.util.Iterator;
 import java.util.PriorityQueue;
 
-import chapter8.GraphUsingList;
+import chapter9.GraphUsingList;
 
-import static chapter8.GraphUsingList.ListNode;
+import static chapter9.GraphUsingList.ListNode;
 
 /**
  * <pre>

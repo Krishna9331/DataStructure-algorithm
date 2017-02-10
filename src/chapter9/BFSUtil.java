@@ -1,9 +1,6 @@
-package chapter8;
+package chapter9;
 
 import chapter5.LinkedListQueue;
-
-import java.util.LinkedList;
-import java.util.Queue;
 
 /**
  * Created by mishrk3 on 1/6/2017.
