@@ -25,7 +25,7 @@ public class DisjointSet {
 	 * @return the root under which the element falls<br/>
 	 *         The time complexity is O(n) see the comment in union method below
 	 */
-	int find(int[] set, int x) {
+	public int find(int[] set, int x) {
 
 		if (set[x] == x) {
 			return x;

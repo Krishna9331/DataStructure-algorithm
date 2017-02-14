@@ -10,12 +10,30 @@ import java.io.InputStreamReader;
 public class GraphUsingList extends Graph {
 
 	public ListNode[] adjacent; // contains head pointer to linked list
+	public Edge[] edges; // for kruskal algo
+
+	public static class Edge implements Comparable<Edge> {
+		public int src;
+		public int dest;
+		public int weight;
+
+		public Edge(int src, int dest, int weight) {
+			this.src = src;
+			this.dest = dest;
+			this.weight = weight;
+		}
+
+		@Override
+		public int compareTo(Edge edge) {
+			return this.weight - edge.weight;
+		}
+	}
 
 	public static class ListNode implements Comparable<ListNode> {
 		public int vertexNumber;
 		public ListNode next;
 		public int weight;
-		public boolean visited; //used in bellmanford algo
+		public boolean visited; // used in bellmanford algo
 
 		public ListNode(int vertexNumber, ListNode next) {
 			this.vertexNumber = vertexNumber;
@@ -24,7 +42,8 @@ public class GraphUsingList extends Graph {
 			this.visited = false;
 		}
 
-		@Override public int compareTo(ListNode node) {
+		@Override
+		public int compareTo(ListNode node) {
 			return this.weight - node.weight;
 		}
 	}
@@ -33,6 +52,7 @@ public class GraphUsingList extends Graph {
 		this.vertex = vertex;
 		this.edge = edge;
 		adjacent = new ListNode[vertex];
+		this.edges = new Edge[edge];
 		for (int i = 0; i < vertex; i++) {
 			adjacent[i] = new ListNode(i, null);
 			adjacent[i].next = adjacent[i];
@@ -56,6 +76,8 @@ public class GraphUsingList extends Graph {
 				if (st.length > 2) {
 					w = Integer.parseInt(st[2]);
 				}
+				Edge e = new Edge(x, y, w);
+				edges[i] = e;
 				ListNode temp = new ListNode(y, null);
 				temp.weight = w;
 				ListNode q = adjacent[x];
