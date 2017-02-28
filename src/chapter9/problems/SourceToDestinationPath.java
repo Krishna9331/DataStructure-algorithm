@@ -16,7 +16,7 @@ import chapter9.GraphUsingMatrix;
  *     |        /         \
  *     |      /  2         E   F
  *     |    /             /     \
- *     |  /              /4      \
+ *     |  /              /4      \2
  *     |/      4        /         \
  *     C-------------->D           G
  * In the above graph A to F is not reachable while F to g or A to D is reachable.
