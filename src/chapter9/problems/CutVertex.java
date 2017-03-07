@@ -20,7 +20,7 @@ import chapter9.GraphUsingMatrix;
  *
  *   In the above graph D and C is cut vertex
  *   removing D -> {E, F} and {A, B, C, G}
- *   removing C -> {E, F} and {A, B, C, G}
+ *   removing C -> {G} and {A, B, D, E, F}
  *
  *   A graph is called bi-connected if the graph is connected after removing any vertex.
  *   
