@@ -33,11 +33,10 @@ public class GraphUsingMatrix extends Graph {
 				String[] st = br.readLine().split(" ");
 				int x = Integer.parseInt(st[0]);
 				int y = Integer.parseInt(st[1]);
-				if (adjacent[x][y] == 1 || adjacent[y][x] == 1 || x >= vertex || y >= vertex) {
+				if (adjacent[x][y] == 1 || x >= vertex || y >= vertex) {
 					throw new IOException();
 				}
 				adjacent[x][y] = 1;
-				adjacent[y][x] = 1;
 			} catch (IOException | IndexOutOfBoundsException ex) {
 				System.out.println("Exception occurred please re enter the pair...");
 				i--;
