@@ -19,6 +19,16 @@ import java.util.Arrays;
  */
 public class SelectionSort {
 
+	/**
+	 * @param numbers
+	 *            array of integer <pre>
+	 *      Find the minimum value in the list
+	 *      Swap it with value in the current position
+	 *      Repeat the steps for all the elements until the entire array is sorted
+	 *      
+	 *  This is called selection sort since it repeatedly selects the smallest element 
+	 *  </pre>
+	 */
 	public void sort(int[] numbers) {
 		int i, j, min, temp;
 		int n = numbers.length;
