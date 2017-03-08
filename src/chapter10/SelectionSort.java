@@ -26,7 +26,7 @@ public class SelectionSort {
 	 *      Swap it with value in the current position
 	 *      Repeat the steps for all the elements until the entire array is sorted
 	 *      
-	 *  This is called selection sort since it repeatedly selects the smallest element 
+	 *  This is called selection sort since it repeatedly selects the smallest element.
 	 *  </pre>
 	 */
 	public void sort(int[] numbers) {
