@@ -10,7 +10,10 @@ import java.util.Arrays;
  * <pre>
  *	This is simple and efficient sorting algorithm. It is efficient for small data than Bubble and selection sort.
  *	
- *	
+ *	WorstCase Time complexity: O(n^2)
+ *	Average case Time complexity: O(n^2)
+ *	Best Case Time complexity: O(n)
+ *	Worst case space complexity: O(n^2) total, O(1) auxiliary
  * </pre>
  */
 public class InsertionSort {
