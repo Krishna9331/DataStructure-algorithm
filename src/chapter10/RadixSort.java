@@ -5,6 +5,14 @@ import java.util.Arrays;
 /**
  * Created by mishrk3 on 3/14/2017.
  */
+
+/**
+ * Radix sort takes time complexity of kn where k represents the number of digit in maximum elements. Hence this sorting
+ * is used for below problems:<br/>
+ * <pre>
+ *     Question: Sort an array of size n where each element is in range [1 to n^2] OR [1 to n^3]
+ * </pre>
+ */
 public class RadixSort {
 
 	public void sort(int[] numbers) {
