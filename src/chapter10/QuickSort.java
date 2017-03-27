@@ -77,6 +77,11 @@ public class QuickSort {
 	 *    so values will be:
 	 *    {2, 1, 3, 9, 6, 7, 4, 5, 11}
 	 *    left = 3, right = 2 and pivotIndex = 2
+	 *    
+	 *  below array can be sorted very easily if we choose pivot carefully:
+	 * {0, 1, 1, 0, 0, 1, 2, 1, 1, 2, 1, 0, 0, 0, 1}
+	 * Since we know that array has just three different elements 0, 1 and 2, hence if we make 1 as pivot it will move
+	 * all 0 to left and all 2 to right of 1 in first partition itself.
 	 *     
 	 * </pre>
 	 */

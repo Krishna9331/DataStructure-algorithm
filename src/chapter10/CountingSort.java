@@ -15,6 +15,10 @@ import java.util.Arrays;
  * The major draw back of counting sort is it requires temporary space of size equal to 1 + maximum element in array.
  * If you look at second example in main method total number of element in array is 10 however, counting sort require
  * space of 671 as maximum element in array is 670.
+ * 
+ * one of the best suited case for counting sort will be below array:
+ * {0, 1, 1, 0, 0, 1, 2, 1, 1, 2, 1, 0, 0, 0, 1}
+ * as it does not has very large elements hence space complexity will be very less.
  * </pre>
  */
 public class CountingSort {
