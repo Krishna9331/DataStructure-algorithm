@@ -85,10 +85,10 @@ public class QuickSort {
 		left = low;
 		right = high;
 		while (left < right) {
-			while (numbers[left] <= pivot) {
+			while (numbers[left] <= pivot && left < right) {
 				left++;
 			}
-			while (numbers[right] > pivot) {
+			while (numbers[right] > pivot && right > 0) {
 				right--;
 			}
 			if (left < right) {
