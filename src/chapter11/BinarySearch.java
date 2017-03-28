@@ -7,6 +7,20 @@ import java.util.function.BiFunction;
  */
 public class BinarySearch {
 
+	/**
+	 * @param elements
+	 *            array of integers
+	 * @param key
+	 *            the element to be searched
+	 * @param function
+	 *            the bi function which is passed to be applied for searching
+	 * @return the index of key in array<br/>
+	 *         <pre>
+	 *     The below binary function can do the search in ascending as well as on descending sorted array.
+	 *     Also this flexibility we got as we pass the function at the run time.
+	 *     Time Complexity O(logn)
+	 * </pre>
+	 */
 	public int search(int[] elements, int key, BiFunction<Integer, Integer, Boolean> function) {
 		return go(elements, key, 0, 0, elements.length - 1, function);
 	}
