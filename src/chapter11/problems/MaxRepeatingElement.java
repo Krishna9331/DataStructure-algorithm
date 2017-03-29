@@ -4,6 +4,8 @@ package chapter11.problems;
  * Created by mishrk3 on 3/29/2017.
  */
 
+import java.util.Hashtable;
+
 /**
  * Given an array where all elements of array ranges from 0 to n-1, write an algorithm to find the element which has
  * maximum number of repetition.
@@ -26,6 +28,9 @@ public class MaxRepeatingElement {
 	 *        Also for evaluating index we always do modulo by 6, so that it will always produce the original number
 	 *        of array, e.g if we consider {3, 2, 1, 8, 2, 3}, the 8 is not the actual array element it got modified
 	 *        after processing the first element of array.
+	 *        
+	 *        Time Complexity: O(n)
+	 *        Space Complexity: O(1)
 	 * </pre>
 	 */
 	public int findMaxRepeatingElement(int[] elements) {
@@ -45,6 +50,33 @@ public class MaxRepeatingElement {
 		return maxIndex;
 	}
 
+	/**
+	 * @param elements
+	 *            the array of integers
+	 * @return the elements repeated maximum number of times<br/>
+	 *         <pre>
+	 *        Time Complexity: O(n)
+	 *        Space Complexity: O(1)
+	 * </pre>
+	 */
+	public int maxRepeatingElement(int[] elements) {
+		int max = 0;
+		int maxElement = -1;
+		Hashtable<Integer, Integer> table = new Hashtable<>();
+		for (int i : elements) {
+			if (table.get(i) != null) {
+				table.put(i, table.get(i) + 1);
+			} else {
+				table.put(i, 1);
+			}
+			if (table.get(i) > max) {
+				maxElement = i;
+				max = table.get(i);
+			}
+		}
+		return maxElement;
+	}
+
 	public static void main(String[] args) {
 
 		MaxRepeatingElement mre = new MaxRepeatingElement();
@@ -52,5 +84,10 @@ public class MaxRepeatingElement {
 				3, 2, 1, 2, 2, 3
 		};
 		System.out.println("Max repeating element is: " + mre.findMaxRepeatingElement(elements));
+
+		int[] elements1 = {
+				3, 2, 1, 2, 2, 3
+		};
+		System.out.println("Max repeating element is: " + mre.maxRepeatingElement(elements1));
 	}
 }
