@@ -4,6 +4,8 @@ package chapter11.problems;
  * Created by mishrk3 on 3/30/2017.
  */
 
+import static java.lang.Math.sqrt;
+
 /**
  * Given an array with size having elements in range 1 to n, If all elements occurs once except 2 elements which occurs
  * twice. find both the element.
@@ -38,6 +40,9 @@ public class FindRepeatingElement {
 	 *              Now if we again perform the xor of both part separately we will get o/p x and y.
 	 *              The reason is same as above logic we separated the number of array as well as 1 to n, hence equal
 	 *              number will cancel out.
+	 *
+	 *              Time Complexity O(n)
+	 *				Space Complexity O(1)
 	 *            </pre>
 	 */
 	public void printRepeatedElements(int[] elements, int n) {
@@ -73,6 +78,69 @@ public class FindRepeatingElement {
 		System.out.println(x + " " + y);
 	}
 
+	/**
+	 * @param elements
+	 *            array of integers containing 1 to n and two repeating element
+	 * @param n
+	 *            the value of n<br/>
+	 *            <pre>
+	 *                The below method works on two mathematical formula
+	 *                1) The sum of element 1 to n is n(n+1)/2
+	 *                2) The multiplication o 1 to n is n!
+	 *                Now we know that two element(say x and y) is repeated in array hence if we add all the elements
+	 *                of array(say S) it will be n(n+1)/2 + x + y
+	 *                Similarly if we multiply all the elements(say P) it will be n! * xy
+	 *
+	 *                So we can right the above two statement as below two equation:
+	 *                 x + y = s - n(n+1)/2
+	 *                 xy = p/n!
+	 *
+	 *
+	 *			if we do square of line 109 it will be     (x+y)^2 = x^2 + y^2 + 2xy
+	 *			And if we multiply line 110 by 4 it will 	4xy
+	 *			Now subtract both equation it will be x^2 + y^2 + 2xy - 4xy = (x-y)^2
+	 *		 	hence x - y =  sqrt(s * s - 4 * p) and we already have
+	 *		 		  x + y =  arrSum - sum
+	 *
+	 *		 	x = (s + d) / 2;
+	 *			y = (s - d) / 2;
+	 *		Time Complexity O(n)
+	 *		Space Complexity O(1)
+	 *            </pre>
+	 */
+	public void printRepeatingElementUsingMathematics(int[] elements, int n) {
+		int d, x, y;
+		int s, p;
+		int arrSum = 0;
+		int arrMul = 1;
+
+		int fact = factorial(n);
+		int sum = n * (n + 1) / 2;
+
+		for (int i = 0; i < elements.length; i++) {
+			arrSum += elements[i];
+			arrMul *= elements[i];
+		}
+		s = arrSum - sum; // now value od s is x + y
+		p = arrMul / fact; // now value of p is xy
+		d = (int) sqrt(s * s - 4 * p);
+		x = (s + d) / 2;
+		y = (s - d) / 2;
+
+		System.out.println(x + " " + y);
+	}
+
+	private int factorial(int n) {
+		return go(n, 1);
+	}
+
+	private int go(int n, int p) {
+		if (n == 0 || n == 1) {
+			return p;
+		}
+		return go(n - 1, n * p);
+	}
+
 	public static void main(String[] args) {
 		FindRepeatingElement freia = new FindRepeatingElement();
 
@@ -80,5 +148,6 @@ public class FindRepeatingElement {
 				4, 2, 4, 5, 2, 3, 1
 		};
 		freia.printRepeatedElements(elements, 5);
+		freia.printRepeatingElementUsingMathematics(elements, 5);
 	}
 }
