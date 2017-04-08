@@ -7,6 +7,15 @@ import static java.lang.Math.pow;
  */
 public class RobinKarpAlgorithm {
 
+	/**
+	 * Time Complexity: O(mn)
+	 * 
+	 * @param text
+	 *            the given text
+	 * @param pattern
+	 *            the pattern
+	 * @return the index at which patter is found in text else -1;
+	 */
 	public int findPattern(char[] text, char[] pattern) {
 		int m = pattern.length;
 		int patternHash = calculateHash(pattern, m);
