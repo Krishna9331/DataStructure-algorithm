@@ -4,7 +4,8 @@ package chapter11.problems;
  * Created by mishrk3 on 4/3/2017.
  */
 
-import static sun.swing.MenuItemLayoutHelper.max;
+
+import static java.lang.Math.max;
 
 /**
  * given an array of n distinct integer, suppose array has property: there exists an index 1 <= k<= n such that
